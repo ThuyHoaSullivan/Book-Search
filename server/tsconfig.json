@@ -1,18 +1,14 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
-    /* Modules */
-    "rootDir": "src" /* Specify the root folder within your source files. */,
-    "moduleResolution": "node", // Helps resolve packages like express, graphql
-    "esModuleInterop": true,
-    "strict": true,     
-
-    "allowImportingTsExtensions":true,
-    "noEmit": true,
-    /* Emit */
-    "outDir": "dist" /* Specify an output folder for all emitted files. */
-    // "noEmitOnError": true /* Disable emitting files if any type checking errors are reported. */
+    "rootDir": "src",  // Root folder for source files
+    "moduleResolution": "bundler",  // Use bundler-style resolution
+    "esModuleInterop": true,  // For compatibility with CommonJS
+    "strict": true,  // Strict type-checking options
+    "noEmit": true,  // Prevent TypeScript from emitting compiled files
+    "allowImportingTsExtensions": true,  // Allow importing .ts extensions
+    "outDir": "dist"  // Output directory for the compiled files
   },
-  "include": ["src"],
-  "typeRoots": ["./node_modules/@types", "./src/types"]
+  "include": ["src"],  // Include all TypeScript files under src
+  "typeRoots": ["./node_modules/@types", "./src/types"]  // Custom types if any
 }
