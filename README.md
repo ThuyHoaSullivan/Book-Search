@@ -32,10 +32,10 @@ JWT – Authentication
 
 Mongoose – MongoDB ORM
 
-## Clone the repository:
+## Clone the repository: 
 
+https://github.com/ThuyHoaSullivan/Book-Search-Engine.git
 
 ## License
-
 This project is licensed under the MIT License.
 
