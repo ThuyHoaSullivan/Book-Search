@@ -1,6 +1,6 @@
 // schemas/resolvers.ts
-import User  from '../models/User.ts';
-import { signToken } from '../services/auth.ts';
+import User  from '../models/User';
+import { signToken } from '../services/auth';
 import type { Context } from './types';
 import fetch from 'node-fetch'; 
 

@@ -2,12 +2,11 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "rootDir": "src",  // Root folder for source files
-    "moduleResolution": "bundler",  // Use bundler-style resolution
+    "moduleResolution": "node",  // Use bundler-style resolution
     "esModuleInterop": true,  // For compatibility with CommonJS
     "strict": true,  // Strict type-checking options
-    "noEmit": true,  // Prevent TypeScript from emitting compiled files
-    "allowImportingTsExtensions": true,  // Allow importing .ts extensions
-    "outDir": "dist"  // Output directory for the compiled files
+    // "noEmit": true,  // Prevent TypeScript from emitting compiled files
+   "outDir": "dist"  // Output directory for the compiled files
   },
   "include": ["src"],  // Include all TypeScript files under src
   "typeRoots": ["./node_modules/@types", "./src/types"]  // Custom types if any
