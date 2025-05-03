@@ -5,7 +5,8 @@ import { expressMiddleware } from '@apollo/server/express4';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import path from 'path';
-
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 import { getUserFromToken } from './services/auth.js';
 import { typeDefs, resolvers } from './schemas/index.js';
 
@@ -13,6 +14,9 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/googlebooks')
   .then(() => {
