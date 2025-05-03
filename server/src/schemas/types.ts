@@ -1,4 +1,4 @@
-import { UserDocument } from '../models/User';
+import { UserDocument } from '../models/User.js';
 
 export interface BookInput {
   bookId: string;

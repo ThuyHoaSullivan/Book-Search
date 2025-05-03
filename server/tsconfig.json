@@ -1,13 +1,14 @@
+// server/tsconfig.json
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
-    "rootDir": "src",  // Root folder for source files
-    "moduleResolution": "node",  // Use bundler-style resolution
-    "esModuleInterop": true,  // For compatibility with CommonJS
-    "strict": true,  // Strict type-checking options
-    // "noEmit": true,  // Prevent TypeScript from emitting compiled files
-   "outDir": "dist"  // Output directory for the compiled files
+    "module": "NodeNext",             // ← ESM modules, Node style
+    "moduleResolution": "NodeNext",   // ← resolve .js to .ts at build time
+    "target": "ES2020",
+    "rootDir": "src",
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "strict": true
   },
-  "include": ["src"],  // Include all TypeScript files under src
-  "typeRoots": ["./node_modules/@types", "./src/types"]  // Custom types if any
+  "include": ["src"]
 }

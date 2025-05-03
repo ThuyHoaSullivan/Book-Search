@@ -6,8 +6,8 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import path from 'path';
 
-import { getUserFromToken } from './services/auth';
-import { typeDefs, resolvers } from './schemas/index';
+import { getUserFromToken } from './services/auth.js';
+import { typeDefs, resolvers } from './schemas/index.js';
 
 dotenv.config();
 
