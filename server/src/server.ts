@@ -53,11 +53,15 @@ async function startServer() {
     );
 
     if (process.env.NODE_ENV === 'production') {
-      const clientPath = path.join(__dirname, '../../client/build');
-      app.use(express.static(clientPath));
+      // __dirname -> server/dist
+      const clientDistPath = path.join(__dirname, '../../client/dist');
     
-      app.get('*', (_, res) => {
-        res.sendFile(path.join(clientPath, 'index.html'));
+      // serve all static assets from client/dist
+      app.use(express.static(clientDistPath));
+    
+      // on any other route, send index.html
+      app.get('*', (_req, res) => {
+        res.sendFile(path.join(clientDistPath, 'index.html'));
       });
     }
 
