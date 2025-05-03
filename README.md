@@ -34,7 +34,7 @@ Mongoose – MongoDB ORM
 
 ## Clone the repository: 
 
-https://github.com/ThuyHoaSullivan/Book-Search-Engine.git
+https://github.com/ThuyHoaSullivan/Book-Search.git
 
 ## Live Link:
 
